@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+html {
+    background-color: rgb(0, 0, 0)
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 35px;
+}
+
+nav a {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+nav a:hover {
+    color: #8B00FF
+}
+
+.container-footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+}
+
+.container-footer h4 {
+    font-family: "Pixelify Sans", sans-serif;
+    color: rgb(69, 69, 69);
+}
+
+
+.container-main {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-main a {
+    text-decoration: none;
+    font-family: "Pixelify Sans", sans-serif;
+    color: rgb(133, 133, 133); 
+}
+
+.social {
+    display: inline-block;
+    margin-right: 10px; 
+    margin-top: 25px;
+}
+
+.social a {
+    text-decoration: none; 
+    color: #333; 
+    padding: 5px 10px; 
+    border: 2px solid #333; 
+    border-radius: 5px; 
+    transition: all 0.3s ease; 
+}
+
+.social a:hover {
+    background-color: #333; 
+    color: #fff; 
+}
