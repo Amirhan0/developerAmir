@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+html {
+    background-color: rgb(0, 0, 0)
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 35px;
+}
+
+nav a {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255); 
+    transition: 0.5s;
+}
+
+nav a:hover {
+    color: #8B00FF
+}
+
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 15px 15px 15px;
+}
+
+.info {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.info h1 {
+    margin: 0px;
+    font-family: "Pixelify Sans", sans-serif;
+    color: rgb(255, 255, 255);  
+    padding-bottom: 15px;
+    padding-right: 10px;
+}
+
+.info h3 {
+    margin: 0;
+    font-family: "Pixelify Sans", sans-serif;
+    color: rgb(255, 255, 255); 
+}
+
+
+.image img {
+    width: 100px;
+    height: 150px;
+}
+
+.image {
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.paragraph p {
+    margin-left: 6%;
+    padding: 10px 10px 10px 30px;
+    font-family: "Pixelify Sans", sans-serif;
+    color: rgb(133, 133, 133);  
+}
+
+.paragraph {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.container-footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+}
+
+.container-footer h4 {
+    font-family: "Pixelify Sans", sans-serif;
+    color: rgb(69, 69, 69);
+}

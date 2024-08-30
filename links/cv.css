@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+html {
+    background-color: rgb(0, 0, 0)
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 35px;
+}
+
+nav a {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+nav a:hover {
+    color: #8B00FF
+}
+
+
+.container-main {
+    padding: 15px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+.education h3 {
+    color: rgb(255, 255, 255);
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+hr {
+    width: 400px;
+}
+
+.information {
+    padding-left: 7%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.information h4 {
+    color: rgb(133, 133, 133);
+    font-family: "Pixelify Sans", sans-serif;
+    margin: 0px;
+}
+
+.information p {
+    color: rgb(133, 133, 133);
+    font-family: "Pixelify Sans", sans-serif;
+    margin: 2px;
+}
+
+.information span {
+    color: rgb(133, 133, 133);
+    font-family: "Pixelify Sans", sans-serif;
+    margin: 2px;
+}
+
+
+.b {
+    font-weight: 900;
+}
+
+.lang h3 {
+    color: rgb(255, 255, 255);
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 700;
+}
+
+.lang {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.languages {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+.languages h2 {
+    color: rgb(133, 133, 133);
+    font-family: "Pixelify Sans", sans-serif;
+    margin: 0;
+    margin-right: 15px;
+}
+
+
+.languages span {
+    color: rgb(133, 133, 133);
+    font-family: "Pixelify Sans", sans-serif;
+    margin-right: 15px;
+}
+.container-footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+}
+
+.container-footer h4 {
+    font-family: "Pixelify Sans", sans-serif;
+    color: rgb(69, 69, 69);
+}
