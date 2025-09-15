@@ -1,138 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
-html {
-    background-color: rgb(0, 0, 0)
+:root {
+  --text: #c9c9c9;
+  --bg: #000;
+  --accent: #8B00FF;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: "Space Mono", monospace;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 0 15px;
+}
+
+/* Navigation */
 header {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+  padding: 20px 0;
+  text-align: center;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 nav a {
-    font-family: "Space Mono", monospace;
-    font-size: 20px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    transition: 0.5s;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
-nav a:hover {
-    color: #8B00FF
+nav a:hover,
+nav a.active {
+  color: var(--accent);
 }
 
-
-.container-main {
-    padding: 15px 15px 15px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20%;
+/* Main blocks */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
-.education h3 {
-    color: rgb(255, 255, 255);
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
-    margin-top: 30px;
-    margin-bottom: 15px;
+.block {
+  margin-bottom: 40px;
+}
+
+.block h3 {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 hr {
-    width: 400px;
+  border: none;
+  border-top: 1px solid #333;
+  margin-bottom: 20px;
+  max-width: 100%;
 }
 
-.information {
-    padding-left: 7%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+/* Items */
+.item h4 {
+  color: #fff;
+  margin-bottom: 5px;
 }
 
-.information h4 {
-    color: rgb(133, 133, 133);
-    font-family: "Space Mono", monospace;
-    margin: 0px;
+.item p,
+.item span {
+  color: var(--text);
+  margin-bottom: 4px;
 }
 
-.information p {
-    color: rgb(133, 133, 133);
-    font-family: "Space Mono", monospace;
-    margin: 2px;
-}
-
-.information span {
-    color: rgb(133, 133, 133);
-    font-family: "Space Mono", monospace;
-    margin: 2px;
-}
-
-
-.b {
-    font-weight: 900;
-}
-
-.lang h3 {
-    color: rgb(255, 255, 255);
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
-}
-
-.lang {
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-}
-
+/* Languages */
 .languages {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  list-style: none;
+  padding-left: 0;
 }
 
-
-
-.languages h2 {
-    color: rgb(133, 133, 133);
-    font-family: "Space Mono", monospace;
-    margin: 0;
-    margin-right: 15px;
+.languages li {
+  margin: 8px 0;
 }
 
-
-.languages span {
-    color: rgb(133, 133, 133);
-    font-family: "Space Mono", monospace;
-    margin-right: 15px;
-}
-.container-footer {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: row;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #555;
 }
 
-.container-footer h4 {
-    font-family: "Space Mono", monospace;
-    color: rgb(69, 69, 69);
+/* Responsive */
+@media (max-width: 600px) {
+  nav {
+    gap: 15px;
+  }
+  nav a {
+    font-size: 16px;
+  }
+  .block h3 {
+    font-size: 20px;
+  }
+  .item h4 {
+    font-size: 18px;
+  }
 }

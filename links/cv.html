@@ -1,82 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="cv.css" />
   <title>CV</title>
 </head>
-
 <body>
-  <div class="container">
-    <header>
-      <nav>
-        <a href="/index.html">About me</a>
-        <a href="/links/cv.html">CV</a>
-        <a href="/links/contacts.html">Contacts</a>
-      </nav>
-    </header>
-    <main>
-      <div class="container-main">
-        <div class="education">
-          <h3>Education</h3>
-          <hr>
-        </div>
-        <div class="information">
-          <h4><span class="b">|</span> STEP Academy Almaty</h4>
-          <p>Studied (studying) front-end developer</p>
-          <p>Almaty</p>
-          <span>2023-2024</span>
+  <header>
+    <nav>
+      <a href="/index.html">About me</a>
+      <a href="/links/cv.html" class="active">CV</a>
+      <a href="/links/contacts.html">Contacts</a>
+    </nav>
+  </header>
 
-          <br>
-
-          <h4>
-            <span class="b">|</span> QazaqStroy
-          </h4>
-          <p>Currently working as a Fullstack Developer</p>
-          <p>Writing code with JavaScript, PHP, React, and Node.js. <br />
-            Also took part in mobile development as a backend developer.</p>
-          <p>Kazakhstan</p>
-          <span>2024 – Present</span>
-        </div>
-
-
-        <div class="lang">
-          <h3>
-            Languages
-            <hr>
-          </h3>
-          <div class="languages">
-            <h2>English</h2>
-            <span class="a">-</span>
-            <h2>Average</h2>
-          </div>
-          <div class="languages">
-            <h2>Russian</h2>
-            <span class="a">-</span>
-            <h2>
-              Native</h2>
-          </div>
-          <div class="languages">
-            <h2>Kazakh</h2>
-            <span class="a">-</span>
-            <h2>Conversational</h2>
-          </div>
-          <div class="languages">
-            <h2>
-              Turkish</h2>
-            <span class="a">-</span>
-            <h2>Native</h2>
-          </div>
-        </div>
+  <main class="container">
+    <!-- Education -->
+    <section class="block">
+      <h3>Education</h3>
+      <hr>
+      <div class="item">
+        <h4><span class="b">|</span> STEP Academy Almaty</h4>
+        <p>Studied (studying) front-end development</p>
+        <p>Almaty</p>
+        <span>2023 – 2024</span>
       </div>
-    </main>
-    <footer>
-      <div class="container-footer">
-        <h4>Created by Gasanov Amirhan</h4>
+    </section>
+
+    <!-- Work -->
+    <section class="block">
+      <h3>Experience</h3>
+      <hr>
+      <div class="item">
+        <h4><span class="b">|</span> QazaqStroy</h4>
+        <p>Fullstack Developer</p>
+        <p>
+          Writing code with JavaScript, PHP, React, Node.js.<br>
+          Took part in mobile development as a backend developer.
+        </p>
+        <p>Kazakhstan</p>
+        <span>2024 – Present</span>
       </div>
-    </footer>
+    </section>
+
+    <!-- Languages -->
+    <section class="block">
+      <h3>Languages</h3>
+      <hr>
+      <ul class="languages">
+        <li><strong>English</strong> – Average</li>
+        <li><strong>Russian</strong> – Native</li>
+        <li><strong>Kazakh</strong> – Conversational</li>
+        <li><strong>Turkish</strong> – Native</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Gasanov Amirhan</p>
+  </footer>
 </body>
-
 </html>
