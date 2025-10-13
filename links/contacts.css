@@ -1,88 +1,309 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* ==================== CSS Variables ==================== */
+:root {
+  --color-bg: #000;
+  --color-text-primary: #fff;
+  --color-text-secondary: #858585;
+  --color-text-muted: #454545;
+  --color-accent: #8B00FF;
+  --color-accent-hover: #a733ff;
+  --color-border: #333;
+  
+  --font-primary: "Space Mono", monospace;
+  
+  --spacing-xs: 10px;
+  --spacing-sm: 15px;
+  --spacing-md: 25px;
+  --spacing-lg: 35px;
+  
+  --transition-fast: 0.3s ease;
+  --transition-normal: 0.5s ease;
+  
+  --border-radius: 8px;
+  --shadow-glow: 0 0 20px rgba(139, 0, 255, 0.3);
+}
+
+/* ==================== Reset & Base ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
-    background-color: rgb(0, 0, 0)
+  scroll-behavior: smooth;
 }
 
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  background: #000000;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ==================== Container ==================== */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: var(--spacing-md);
 }
 
+/* ==================== Header & Navigation ==================== */
 header {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+  margin-top: var(--spacing-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  animation: slideDown 0.6s ease;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: var(--spacing-lg);
 }
 
 nav a {
-    font-family: "Space Mono", monospace;
-    font-size: 20px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    transition: 0.5s;
+  font-family: var(--font-primary);
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: all var(--transition-normal);
+  padding: 8px 16px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
 }
 
-nav a:hover {
-    color: #8B00FF
+nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: all var(--transition-fast);
+  transform: translateX(-50%);
 }
 
-.container-footer {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: row;
+nav a:hover,
+nav a.active {
+  color: var(--color-accent);
+  transform: translateY(-2px);
 }
 
-.container-footer h4 {
-    font-family: "Space Mono", monospace;
-    color: rgb(69, 69, 69);
+nav a:hover::before,
+nav a.active::before {
+  width: 80%;
 }
 
+/* ==================== Main Content ==================== */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .container-main {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+  margin-top: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: var(--spacing-md);
+  animation: fadeInUp 0.8s ease;
 }
 
-.container-main a {
-    text-decoration: none;
-    font-family: "Space Mono", monospace;
-    color: rgb(133, 133, 133); 
-}
-
+/* ==================== Social Links ==================== */
 .social {
-    display: inline-block;
-    margin-right: 10px; 
-    margin-top: 25px;
+  display: inline-block;
+  animation: fadeInUp 0.6s ease backwards;
+}
+
+.social:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.social:nth-child(3) {
+  animation-delay: 0.4s;
 }
 
 .social a {
-    text-decoration: none; 
-    color: #333; 
-    padding: 5px 10px; 
-    border: 2px solid #333; 
-    border-radius: 5px; 
-    transition: all 0.3s ease; 
+  font-family: var(--font-primary);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  padding: 14px 35px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  font-size: 1.1rem;
+  font-weight: 400;
+  min-width: 200px;
+  justify-content: center;
+}
+
+/* SVG иконки */
+.social-icon {
+  width: 24px;
+  height: 24px;
+  transition: all var(--transition-fast);
+}
+
+.social a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(139, 0, 255, 0.3), transparent);
+  transition: left var(--transition-normal);
+}
+
+.social a:hover::before {
+  left: 100%;
 }
 
 .social a:hover {
-    background-color: #333; 
-    color: #fff; 
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+  border-color: var(--color-accent);
+  color: var(--color-text-primary);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: var(--shadow-glow);
+}
+
+.social a:hover .social-icon {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 0 8px rgba(139, 0, 255, 0.8));
+}
+
+.social a:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* ==================== Footer ==================== */
+footer {
+  margin-top: var(--spacing-lg);
+  width: 100%;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+  padding: var(--spacing-md);
+}
+
+.container-footer h4 {
+  font-family: var(--font-primary);
+  color: var(--color-text-muted);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+/* ==================== Animations ==================== */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== Hover Effects ==================== */
+.social a span {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+  nav {
+    gap: var(--spacing-md);
+  }
+  
+  nav a {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+  
+  .social a {
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+  
+  .social a {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .container {
+    padding: var(--spacing-sm);
+  }
+}
+
+/* ==================== Accessibility ==================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.social a:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+nav a:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
