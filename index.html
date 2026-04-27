@@ -1,60 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Gasanov Amirhan - Fullstack Developer with almost 2 years of experience in JavaScript, React, Node.js" />
-  <script src="space-background.js" defer></script>
-  <script src="index.js" defer></script>
-  <link rel="stylesheet" href="style.css" />
-  <title>About Me - Gasanov Amirhan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amirhan Gassanov — Software Engineer, fullstack и frontend-разработка">
+    <title>Amirhan Gassanov — Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="container">
-    
-    <!-- Навигация -->
+    <div class="noise"></div>
+
     <header class="header">
-      <nav class="nav">
-        <a href="index.html" class="nav-link active">About me</a>
-        <a href="links/cv.html" class="nav-link">CV</a>
-        <a href="links/contacts.html" class="nav-link">Contacts</a>
-      </nav>
+        <div class="container header__inner">
+            <a href="#top" class="logo">
+                <span class="logo__mark">AG</span>
+                <span class="logo__text">Amirhan Gassanov</span>
+            </a>
+            <nav class="nav">
+                <a href="#works" class="nav__link">Работы</a>
+                <a href="#about" class="nav__link">О себе</a>
+                <a href="#contact" class="nav__link">Написать</a>
+            </nav>
+            <div class="header__status">
+                <span class="status-dot"></span>
+                <span class="status-text">Открыт к заказам 2026</span>
+            </div>
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
 
-    <!-- Основной блок -->
-    <main class="main">
-      <section class="info">
-        <div class="me">
-          <h1 class="fade-in">Gasanov Amirhan</h1>
-          <h3 class="fade-in typing-animation">Fullstack Developer</h3>
-        </div>
-        <div class="image fade-in">
-          <img src="me.jpg" alt="Portrait of Gasanov Amirhan" />
-        </div>
-      </section>
+    <main id="top">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero__meta">
+                    <span class="status-dot"></span>
+                    <span>Открыт к заказам 2026</span>
+                </div>
 
-      <!-- Описание -->
-      <section class="about fade-in">
-        <p>
-          Web developer with almost 2 years of experience. <br />
-          The one who makes your website <br />
-          stylish, functional, and user-friendly. <br />
-          I create projects using JavaScript, CSS, HTML, <br />
-          as well as modern frameworks like React, and Node.js. <br />
-          All it takes is a bit of time, <br />
-          but the main ingredient is passion for the craft.
-        </p>
-      </section>
+                <h1 class="hero__title">
+                    <span class="line">от ясной логики</span>
+                    <span class="line">
+                        <span class="line__inner">к&nbsp;</span>
+                        <span class="accent">удобному опыту</span>
+                        <i data-lucide="asterisk" class="hero__asterisk"></i>
+                    </span>
+                </h1>
+
+                <p class="hero__roles">Software Engineer · Fullstack · Frontend</p>
+                <p class="hero__desc">
+                    Я Amirhan Gassanov — software engineer. Делаю полный цикл: от API и базы до интерфейса.
+                    Детали, архитектура и продуктовое качество — в приоритете.
+                </p>
+
+                <div class="hero__actions">
+                    <a href="#works" class="btn btn--primary">
+                        <span>Смотреть работы</span>
+                        <i data-lucide="arrow-down-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn--ghost">
+                        <span>Написать</span>
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <div class="hero__scroll">
+                    <i data-lucide="mouse"></i>
+                    <span>Скролл</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORKS -->
+        <section class="section works" id="works">
+            <div class="container">
+                <div class="section__head">
+                    <h2 class="section__title">Избранные работы</h2>
+                    <span class="section__counter">2 публичных · остальное под NDA</span>
+                </div>
+
+                <p class="works__intro">
+                    Большую часть продуктов делал в закрытых бизнес-компаниях: код и детали интерфейсов недоступны
+                    публично. Это нормальная практика. Ниже — проекты, которые можно открыть в браузере; про опыт
+                    внутри NDA расскажу на созвоне или в переписке.
+                </p>
+
+                <div class="works__list">
+                    <article class="work">
+                        <div class="work__num">01</div>
+                        <div class="work__content">
+                            <div class="work__header">
+                                <h3 class="work__title">Smartziyatker</h3>
+                                <span class="work__year">smartziyatker.kz</span>
+                            </div>
+                            <p class="work__desc">
+                                Веб-портал для организации мероприятий в дистанционном формате: обучающиеся и педагоги
+                                ведут подготовку и проведение событий в одной среде вместо разрозненных чатов и таблиц.
+                            </p>
+                            <ul class="work__tags">
+                                <li>React</li>
+                                <li>TypeScript</li>
+                            </ul>
+                        </div>
+                        <a href="https://smartziyatker.kz/" class="work__link" target="_blank" rel="noopener noreferrer" aria-label="Открыть smartziyatker.kz">
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="work">
+                        <div class="work__num">02</div>
+                        <div class="work__content">
+                            <div class="work__header">
+                                <h3 class="work__title">Joozlet Marketplace (Nutrient)</h3>
+                                <span class="work__year">nutrient.10k.kz</span>
+                            </div>
+                            <p class="work__desc">
+                                Маркетплейс на Vue.js с поддержкой PWA: установка как приложение, работа офлайн там,
+                                где это предусмотрено сценарием, и удобный клиентский интерфейс.
+                            </p>
+                            <ul class="work__tags">
+                                <li>Vue.js</li>
+                                <li>PWA</li>
+                            </ul>
+                        </div>
+                        <a href="https://nutrient.10k.kz/home" class="work__link" target="_blank" rel="noopener noreferrer" aria-label="Открыть nutrient.10k.kz">
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="work work--nda">
+                        <div class="work__num">—</div>
+                        <div class="work__content">
+                            <div class="work__header">
+                                <h3 class="work__title">Корпоративные и внутренние продукты</h3>
+                                <span class="work__year work__year--muted">NDA</span>
+                            </div>
+                            <p class="work__desc">
+                                Fullstack и frontend в закрытых командах: интеграции, админки, клиентские кабинеты,
+                                высоконагруженные сценарии. Без ссылок и скриншотов — по соглашению с работодателем.
+                                Могу описать стек, роль и масштаб задач при личном контакте.
+                            </p>
+                            <ul class="work__tags">
+                                <li>Коммерческая разработка</li>
+                                <li>Внутренние сервисы</li>
+                                <li>Fullstack / Frontend</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="work__link work__link--nda" aria-label="Обсудить опыт под NDA">
+                            <i data-lucide="message-circle"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section about" id="about">
+            <div class="container">
+                <h2 class="section__title">О себе</h2>
+
+                <div class="about__stats">
+                    <div class="stat">
+                        <span class="stat__num" data-count="3">0</span>
+                        <span class="stat__label">года опыта</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__num" data-count="10">0</span>
+                        <span class="stat__label">проектов сдано</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__num" data-count="18">0</span>
+                        <span class="stat__label">довольных клиентов</span>
+                    </div>
+                </div>
+
+                <blockquote class="about__quote">
+                    «Сильный продукт держится не на модном стеке, а на том, что его можно развивать и не ломать
+                    пользователю привычный сценарий.»
+                </blockquote>
+
+                <div class="about__text">
+                    <p>
+                        Работаю fullstack и frontend: проектирую сервисы, интеграции и UI так, чтобы они
+                        масштабировались и оставались понятными команде. Важны надёжность API, чистая модель данных
+                        и интерфейс без лишнего шума.
+                    </p>
+                    <p>
+                        Стек подбираю под задачу — от TypeScript и современных фреймворков до инфраструктуры
+                        и CI. Производительность и поддерживаемость кода — не «потом», а с первого коммита.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- STACK -->
+        <section class="section stack">
+            <div class="container">
+                <h2 class="section__title">Стек технологий</h2>
+
+                <div class="stack__grid">
+                    <div class="stack__col">
+                        <div class="stack__head">
+                            <i data-lucide="code-2"></i>
+                            <h3>Основа</h3>
+                        </div>
+                        <ul class="stack__list">
+                            <li>TypeScript</li>
+                            <li>JavaScript ES6+</li>
+                            <li>HTML5 / CSS3</li>
+                        </ul>
+                    </div>
+
+                    <div class="stack__col">
+                        <div class="stack__head">
+                            <i data-lucide="layers"></i>
+                            <h3>Фреймворки</h3>
+                        </div>
+                        <ul class="stack__list">
+                            <li>React / Next.js</li>
+                            <li>Vue 3 / Nuxt</li>
+                        </ul>
+                    </div>
+
+                    <div class="stack__col">
+                        <div class="stack__head">
+                            <i data-lucide="wrench"></i>
+                            <h3>Инструменты</h3>
+                        </div>
+                        <ul class="stack__list">
+                            <li>Figma</li>
+                            <li>Vite / Webpack</li>
+                            <li>Git / CI/CD</li>
+                        </ul>
+                    </div>
+
+                    <div class="stack__col">
+                        <div class="stack__head">
+                            <i data-lucide="server"></i>
+                            <h3>Прочее</h3>
+                        </div>
+                        <ul class="stack__list">
+                            <li>Node.js</li>
+                            <li>PostgreSQL</li>
+                            <li>REST / GraphQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <span class="contact__label">Давайте работать вместе</span>
+                <h2 class="contact__title">
+                    Есть проект? <em>Давайте</em><br>
+                    обсудим.
+                </h2>
+                <p class="contact__desc">
+                    Открыт к новым задачам — фриланс, контракт или постоянная занятость.
+                </p>
+
+                <a href="https://t.me/ameerqan" class="contact__primary" target="_blank" rel="noopener noreferrer">
+                    <span>@ameerqan</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+                <div class="contact__socials">
+                    <a href="https://t.me/ameerqan" class="social" target="_blank" rel="noopener noreferrer">
+                        <i data-lucide="send"></i>
+                        <span>Telegram</span>
+                    </a>
+                    <a href="https://www.instagram.com/ameerqan/" class="social" target="_blank" rel="noopener noreferrer">
+                        <svg class="social__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Подвал -->
     <footer class="footer">
-      <p>Created by Gasanov Amirhan © 2025</p>
+        <div class="container footer__inner">
+            <span>Amirhan Gassanov © 2026. Все права защищены.</span>
+            <a href="#top" class="to-top">
+                <i data-lucide="arrow-up"></i>
+                <span>Вверх</span>
+            </a>
+        </div>
     </footer>
 
-  </div>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
