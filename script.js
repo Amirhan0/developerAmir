@@ -170,6 +170,41 @@
     };
 
     // ============================
+    // BURGER MENU
+    // ============================
+    const initBurger = () => {
+        const burger = document.querySelector('.burger');
+        const mobileNav = document.getElementById('mobile-nav');
+        if (!burger || !mobileNav) return;
+
+        const open = () => {
+            burger.classList.add('is-active');
+            burger.setAttribute('aria-expanded', 'true');
+            mobileNav.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const close = () => {
+            burger.classList.remove('is-active');
+            burger.setAttribute('aria-expanded', 'false');
+            mobileNav.classList.remove('is-open');
+            document.body.style.overflow = '';
+        };
+
+        burger.addEventListener('click', () => {
+            burger.classList.contains('is-active') ? close() : open();
+        });
+
+        mobileNav.querySelectorAll('.mobile-nav__link').forEach((link) => {
+            link.addEventListener('click', close);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') close();
+        });
+    };
+
+    // ============================
     // RUN
     // ============================
     document.addEventListener('DOMContentLoaded', () => {
@@ -180,5 +215,6 @@
         initSmoothAnchors();
         initMagnetic();
         initYear();
+        initBurger();
     });
 })();
