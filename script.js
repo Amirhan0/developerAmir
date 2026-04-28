@@ -170,6 +170,63 @@
     };
 
     // ============================
+    // MOBILE MENU (burger)
+    // ============================
+    const initMobileMenu = () => {
+        const burger = document.getElementById('burger');
+        const nav = document.querySelector('.nav');
+
+        if (!burger || !nav) return;
+
+        const open = () => {
+            document.body.classList.add('is-menu-open');
+            burger.classList.add('is-open');
+            burger.setAttribute('aria-expanded', 'true');
+        };
+
+        const close = () => {
+            document.body.classList.remove('is-menu-open');
+            burger.classList.remove('is-open');
+            burger.setAttribute('aria-expanded', 'false');
+        };
+
+        const toggle = () => {
+            if (document.body.classList.contains('is-menu-open')) close();
+            else open();
+        };
+
+        burger.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggle();
+        });
+
+        // Close on nav link click
+        nav.querySelectorAll('a[href^="#"]').forEach((link) => {
+            link.addEventListener('click', () => close());
+        });
+
+        // Close on overlay click (body::after). We detect click outside nav & burger.
+        document.addEventListener('click', (e) => {
+            if (!document.body.classList.contains('is-menu-open')) return;
+            const target = e.target;
+            if (!(target instanceof Node)) return;
+            if (nav.contains(target) || burger.contains(target)) return;
+            close();
+        });
+
+        // Close on ESC
+        document.addEventListener('keydown', (e) => {
+            if (!document.body.classList.contains('is-menu-open')) return;
+            if (e.key === 'Escape') close();
+        });
+
+        // If switched to desktop, ensure closed
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) close();
+        });
+    };
+
+    // ============================
     // RUN
     // ============================
     document.addEventListener('DOMContentLoaded', () => {
@@ -179,6 +236,7 @@
         initCounters();
         initSmoothAnchors();
         initMagnetic();
+        initMobileMenu();
         initYear();
     });
 })();
